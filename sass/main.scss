@@ -1,0 +1,21 @@
+@import './utils/hidden';
+@import './utils/same';
+@import './utils/variables';
+@import './utils/placeholders';
+// @import './utils/adapt';
+
+@import './playout/header';
+@import './playout/wrapper';
+@import './playout/about';
+@import './playout/business';
+@import './playout/team';
+@import './playout/clients';
+@import './playout/footer';
+@import './playout/categorie';
+@import './playout/collection';
+
+@import './components/header-logo';
+@import './components/modal';
+@import './components/title';
+@import './components/footer-logo';
+@import './components/container';

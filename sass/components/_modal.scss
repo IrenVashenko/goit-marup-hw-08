@@ -1,0 +1,183 @@
+.window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms, visibility 250ms;
+    z-index: 1;
+}
+.window.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--clr-white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    @media screen and (min-width: 1200px){
+        width: 528px;
+    }
+    @media screen and (max-width: 1199px){
+        width: 450px;
+    }
+}
+.modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    padding: 6px;
+    margin: 8px 8px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__close:hover,
+.modal__close:focus {
+    fill: #2196f3;
+}
+
+
+.modals {
+    padding: 40px;
+}
+.modals__text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+
+    padding-bottom: 12px;
+}
+.modals__input-text {
+    font-size: 12px;
+    line-height: 1.17;
+    display: block;
+    letter-spacing: 0.01em;
+    color: #757575;
+
+    margin-bottom: 4px;
+}
+.modals__feild {
+    margin-bottom: 10px;
+}
+.modals__input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.inputs {
+    position: relative;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+}
+.modals__input:hover,
+.modals__input:focus {
+    border: 1px solid var(--clr-hover);
+}
+.inputs:hover {
+    fill: #2196f3;
+}
+.modals__input:focus + .input-icon {
+    fill: #2196f3;
+}
+.user-text {
+    width: 100%;;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+
+    outline: none;
+    resize: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        border: 1px solid var(--clr-hover);
+    }
+}
+
+.user-text::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+.modal__btn {
+    background-color: #2196f3;
+    border: none;
+    border-radius: 4px;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--clr-white);
+    padding: 10px 55px;
+
+    margin-top: 30px;
+    cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__btn:hover,
+.modal__btn:focus {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.modal__feild-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--clr-grey-2);
+    @media screen and (min-width: 1200px){
+        font-size: 14px;
+    }
+    @media screen and (max-width: 1199px){
+        font-size: 12px;
+    }
+}
+.modal__feild-text::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--clr-black);
+    border-radius: 2px;
+
+    margin-right: 7px;
+}
+.modal-check-link {
+    margin-left: 5px;
+    color: var(--clr-hover);
+    border-bottom: 0.67px solid var(--clr-hover);
+}
+.modal__check:checked + .modal__feild-text::before {
+    background-image: url(../images/icon-check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}

@@ -1,0 +1,24 @@
+.footer__logo {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--clr-white);
+    @media screen and (min-width:480px) and (max-width:767px){
+        display: flex;
+        justify-content: center;
+    }
+    @media screen and (min-width: 768px){
+       display: flex;
+       justify-content: center;
+    }
+    @media screen and (max-width:480px){
+       display: flex;
+       justify-content: center;
+    }
+}
+
+.color-blue {
+    color: var(--clr-hover);
+}
